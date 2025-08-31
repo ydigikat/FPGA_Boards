@@ -1,0 +1,110 @@
+// ---------------------------------------------------------------------------------
+// Tang Nano 9K - Physical constraints
+//
+// Pins grouped in pairs are differential.  The board has a limited number of
+// single-ended pins broken out.
+// ---------------------------------------------------------------------------------
+//
+//      1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+//     67 86 85 84 83 82 81 80 79 77 76 75 74 73 72 71 70 5V 48 49 31 32 GD 3V3 
+//  USB                                                                       HDMI
+//     38 37 36 39 25 26 27 28 29 30 33 34 40 35 41 42 51 53 54 55 56 57 68 69   
+//
+// ---------------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------------
+// Clock, reset_n 
+// ---------------------------------------------------------------------------------
+IO_LOC "i_clk"  52; IO_PORT "i_clk" IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+IO_LOC "i_rst_n" 4; IO_PORT "i_rst_n" PULL_MODE=UP;
+
+// ---------------------------------------------------------------------------------
+// Onboard LEDs
+// ---------------------------------------------------------------------------------
+IO_LOC "o_led[0]" 10; IO_PORT "o_led[0]" PULL_MODE=UP DRIVE=8;
+IO_LOC "o_led[1]" 11; IO_PORT "o_led[1]" PULL_MODE=UP DRIVE=8;
+IO_LOC "o_led[2]" 13; IO_PORT "o_led[2]" PULL_MODE=UP DRIVE=8;
+IO_LOC "o_led[3]" 14; IO_PORT "o_led[3]" PULL_MODE=UP DRIVE=8;
+IO_LOC "o_led[4]" 15; IO_PORT "o_led[4]" PULL_MODE=UP DRIVE=8;
+IO_LOC "o_led[5]" 16; IO_PORT "o_led[5]" PULL_MODE=UP DRIVE=8;
+
+// ---------------------------------------------------------------------------------
+// IO Bank 2 : 25-42 (3v3)
+// ---------------------------------------------------------------------------------
+           
+IO_LOC "pin_25" 25; IO_PORT "pin_25" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB8A
+IO_LOC "pin_26" 26; IO_PORT "pin_26" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB8B
+
+IO_LOC "pin_27" 27; IO_PORT "pin_27" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB11A
+IO_LOC "pin_28" 28; IO_PORT "pin_28" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB11B
+
+IO_LOC "pin_29" 29; IO_PORT "pin_29" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB13A
+IO_LOC "pin_30" 30; IO_PORT "pin_30" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB13B
+
+IO_LOC "pin_31" 31; IO_PORT "pin_31" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB15A
+IO_LOC "pin_32" 32; IO_PORT "pin_32" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB15B
+
+IO_LOC "pin_33" 33; IO_PORT "pin_33" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB15A
+IO_LOC "pin_34" 34; IO_PORT "pin_34" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB15B
+
+IO_LOC "pin_35" 35; IO_PORT "pin_35" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB29A
+IO_LOC "pin_36" 36; IO_PORT "pin_36" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB29B
+
+IO_LOC "pin_37" 37; IO_PORT "pin_37" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB31A
+IO_LOC "pin_38" 38; IO_PORT "pin_38" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB31B
+
+IO_LOC "pin_39" 39; IO_PORT "pin_39" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB33A
+IO_LOC "pin_40" 40; IO_PORT "pin_40" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB33A
+
+IO_LOC "pin_41" 31; IO_PORT "pin_41" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB41A
+IO_LOC "pin_42" 32; IO_PORT "pin_42" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOB41B
+
+// ---------------------------------------------------------------------------------
+// IO Bank 1 (3v3)
+// ---------------------------------------------------------------------------------
+
+IO_LOC "pin_48" 48; IO_PORT "pin_48" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR24B
+IO_LOC "pin_49" 49; IO_PORT "pin_49" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR24A
+
+IO_LOC "pin_51" 51; IO_PORT "pin_51" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR17B
+
+IO_LOC "pin_53" 53; IO_PORT "pin_53" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR15B
+IO_LOC "pin_54" 54; IO_PORT "pin_54" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR15A
+
+IO_LOC "pin_55" 53; IO_PORT "pin_55" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR14B
+IO_LOC "pin_56" 54; IO_PORT "pin_56" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR14A
+
+IO_LOC "pin_57" 57; IO_PORT "pin_57" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR13A
+
+IO_LOC "pin_63" 63; IO_PORT "pin_63" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR5A
+
+IO_LOC "pin_68" 68; IO_PORT "pin_68" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOT42B
+IO_LOC "pin_69" 69; IO_PORT "pin_69" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOT42A
+
+IO_LOC "pin_70" 70; IO_PORT "pin_70" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOT41B
+IO_LOC "pin_71" 71; IO_PORT "pin_71" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOT41A
+
+IO_LOC "pin_72" 72; IO_PORT "pin_72" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOT39B
+IO_LOC "pin_73" 73; IO_PORT "pin_73" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOT39A
+
+IO_LOC "pin_74" 74; IO_PORT "pin_74" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOT38B
+IO_LOC "pin_75" 75; IO_PORT "pin_75" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOT38A
+
+IO_LOC "pin_76" 76; IO_PORT "pin_76" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR37B
+IO_LOC "pin_77" 77; IO_PORT "pin_77" IO_TYPE=LVCMOS33 PULL_MODE=DOWN;   // IOR37A
+
+// ---------------------------------------------------------------------------------
+// IO Bank 3 : 79-86 (1v8)
+// ---------------------------------------------------------------------------------
+
+IO_LOC "pin_79" 79; IO_PORT "pin_79" IO_TYPE=LVCMOS18 PULL_MODE=DOWN;   // IOB12B
+IO_LOC "pin_80" 80; IO_PORT "pin_80" IO_TYPE=LVCMOS18 PULL_MODE=DOWN;   // IOB12A
+
+IO_LOC "pin_81" 81; IO_PORT "pin_81" IO_TYPE=LVCMOS18 PULL_MODE=DOWN;   // IOB11A
+IO_LOC "pin_82" 82; IO_PORT "pin_82" IO_TYPE=LVCMOS18 PULL_MODE=DOWN;   // IOB11B
+
+IO_LOC "pin_83" 83; IO_PORT "pin_83" IO_TYPE=LVCMOS18 PULL_MODE=DOWN;   // IOB10A
+IO_LOC "pin_84" 84; IO_PORT "pin_84" IO_TYPE=LVCMOS18 PULL_MODE=DOWN;   // IOB10B
+
+IO_LOC "pin_85" 85; IO_PORT "pin_85" IO_TYPE=LVCMOS18 PULL_MODE=DOWN;   // IOB8A
+IO_LOC "pin_86" 86; IO_PORT "pin_86" IO_TYPE=LVCMOS18 PULL_MODE=DOWN;   // IOB8B
